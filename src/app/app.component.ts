@@ -8,7 +8,7 @@ import { LoadingService } from 'src/app/core/services';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'my-weather-app';
+  title = 'my-weather';
 
   constructor(public loadingService: LoadingService) {}
 
