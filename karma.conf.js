@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/kenoby198-rubensferreira'),
+      dir: require('path').join(__dirname, './coverage/my-weather-app'),
       subdir: '.',
       reporters: [
         { type: 'html' },

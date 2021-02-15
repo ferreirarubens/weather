@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import * as bcrypt from 'bcryptjs';
+import { LoadingService } from 'src/app/core/services';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  title = 'kenoby198-rubensferreira';
+export class AppComponent implements OnInit {
+  title = 'my-weather-app';
+
+  constructor(public loadingService: LoadingService) {}
+
+  ngOnInit(): void {
+  }
 }

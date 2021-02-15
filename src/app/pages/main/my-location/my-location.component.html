@@ -1,0 +1,56 @@
+<div class="w100 fx-col">
+  <div
+    class="bg-img fx-col fx-center-center"
+    [ngClass]="(isHandset$ | async) ? 'h-200' : 'h-350'"
+  >
+    <input
+      class="form-search w-300 elevation-4"
+      ngx-google-places-autocomplete
+      #placesRef="ngx-places"
+      (onAddressChange)="handleAddressChange($event)"
+      [(ngModel)]="queryLocation"
+    />
+  </div>
+  <div class="fx-row fx-center-center w100 py-50" *ngIf="!!weather">
+    <div
+      class="fx-col elevation-2 mat-color-white p-12 pr-50 box-weather pt-24"
+      [ngClass]="{ 'w100 mx-20': (isHandset$ | async) }"
+    >
+      <div class="fx-row fx-gap-8 fx-start-center">
+        <mat-icon>location_on</mat-icon>
+        <span>{{ locationString }}</span>
+      </div>
+      <small class="mat-small ml-32 text-gray">{{
+        getDate(today | date: "EEE_d_MMMM_HH:mm")
+      }}</small>
+      <div
+        [ngClass]="
+          (isHandset$ | async)
+            ? 'fx-col'
+            : 'fx-row fx-gap-100 fx-between-center'
+        "
+      >
+        <div class="fx-row fx-gap-30 fx-start-center">
+          <img
+            [src]="
+              'http://openweathermap.org/img/wn/' +
+              weather.weather[0].icon +
+              '@4x.png'
+            "
+            alt=""
+          />
+          <h1
+            class="mat-display-4 mb-0"
+            [class.mat-display-3]="isHandset$ | async"
+          >
+            {{ trunc(weather.main.temp) }}º
+          </h1>
+        </div>
+        <div class="fx-col fx-center-end fx-gap-5 text-gray">
+          <span>{{ weather.weather[0].description | titlecase }}</span>
+          <span>Sensação térmica de {{ trunc(weather.main.feels_like) }}º</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

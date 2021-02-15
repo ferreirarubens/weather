@@ -1,0 +1,19 @@
+$gradient-color: red;
+.login {
+  position: relative;
+  &-gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: $gradient-color;
+    background: linear-gradient(
+      326deg,
+      $gradient-color 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  &-box {
+    position: relative;
+  }
+}

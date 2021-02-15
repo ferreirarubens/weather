@@ -1,0 +1,66 @@
+<div class="mat-color-indigo-700 wh100 login fx-col fx-center-center">
+  <div class="login-gradient"></div>
+  <div class="fx-col fx gap-30 login-box elevation-3 mat-color-white p-30 fx-start-center">
+    <h2 class="mat-headline text-gray">LOGIN</h2>
+    <form class="fx-col" #form="ngForm">
+      <mat-form-field class="w-300" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          type="email"
+          name="email"
+          matInput
+          [(ngModel)]="credentials.email"
+          placeholder="Ex. pat@example.com"
+          #email="ngModel"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+          required
+        />
+        <mat-icon matSuffix class="text-gray">mail</mat-icon>
+        <mat-error
+          *ngIf="email.hasError('pattern') && !email.hasError('required')"
+        >
+          Por favor, insira um e-mail válido
+        </mat-error>
+        <mat-error *ngIf="email.hasError('required')">
+          Email é <strong>obrigatório</strong>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="w-300" appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input
+          type="password"
+          name="password"
+          matInput
+          [(ngModel)]="credentials.password"
+          #password="ngModel"
+          required
+        />
+        <mat-icon matSuffix class="text-gray">password</mat-icon>
+        <mat-error *ngIf="password.hasError('required')">
+          Senha é <strong>obrigatória</strong>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="w-300" appearance="outline">
+        <mat-label>Weather API Key</mat-label>
+        <input
+          type="text"
+          name="apiWeather"
+          matInput
+          [(ngModel)]="apiWeather"
+          #apiWeatherModel="ngModel"
+          required
+          (focusout)="checkApiWeatherKey()"
+        />
+        <mat-icon matSuffix class="text-gray">vpn_key_outline</mat-icon>
+        <mat-error *ngIf="apiWeatherModel.hasError('required')">
+          API é <strong>obrigatória</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" [disabled]="form.invalid || !apiWeatherChecked" (click)="login()">LOGIN</button>
+      <small class="mat-small">
+        <mat-error>{{error}}</mat-error>
+      </small>
+    </form>
+  </div>
+</div>
