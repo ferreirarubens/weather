@@ -17,11 +17,11 @@ At the login, the user must insert the email, password, and the Key from the [AP
 
 ### Mobile
 
-<img src="https://raw.githubusercontent.com/ferreirarubens/my-weather/main/images/login-mobile.png" alt="logo" width="350">
+<img src="https://raw.githubusercontent.com/ferreirarubens/weather/main/images/login-mobile.png" alt="logo" width="350">
 
 ### WEB
 
-<img src="https://raw.githubusercontent.com/ferreirarubens/my-weather/main/images/login.png" alt="logo" width="100%">
+<img src="https://raw.githubusercontent.com/ferreirarubens/weather/main/images/login.png" alt="logo" width="100%">
 
 ## Main Page
 
@@ -29,15 +29,15 @@ On this page, the app will request by current location from the user, and after 
 
 Even If not (user location authorization), the app allows the user to search for other places to get weather info
 
-<img src="https://raw.githubusercontent.com/ferreirarubens/my-weather/main/images/main-search.png" alt="logo" width="350">
+<img src="https://raw.githubusercontent.com/ferreirarubens/weather/main/images/main-search.png" alt="logo" width="350">
 
 ### Mobile
 
-<img src="https://raw.githubusercontent.com/ferreirarubens/my-weather/main/images/main-mobile.png" alt="logo" width="350">
+<img src="https://raw.githubusercontent.com/ferreirarubens/weather/main/images/main-mobile.png" alt="logo" width="350">
 
 ### WEB
 
-<img src="https://raw.githubusercontent.com/ferreirarubens/my-weather/main/images/main.png" alt="logo" width="100%">
+<img src="https://raw.githubusercontent.com/ferreirarubens/weather/main/images/main.png" alt="logo" width="100%">
 
 ## Libs
 

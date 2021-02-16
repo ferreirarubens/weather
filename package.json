@@ -1,5 +1,5 @@
 {
-  "name": "my-weather",
+  "name": "weather",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "buid-github": "ng build --prod --base-href 'https://ferreirarubens.github.io/my-weather/'",
-    "publish-github": "npx angular-cli-ghpages --dir=dist/my-weather"
+    "buid-github": "ng build --prod --base-href 'https://ferreirarubens.github.io/weather/'",
+    "publish-github": "npx angular-cli-ghpages --dir=dist/weather"
   },
   "private": true,
   "dependencies": {
@@ -28,7 +28,7 @@
     "ngx-loading": "^8.0.0",
     "ngx-webstorage": "^7.0.1",
     "rxjs": "~6.6.0",
-    "my-weather": "^0.2.0",
+    "weather": "^0.2.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },
