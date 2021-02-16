@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This application aims to obtain the user's location and provide the current weather, in addition to providing the current weather from any other location that the user wishes.
 
+- [Demo App](https://ferreirarubens.github.io/weather/)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
