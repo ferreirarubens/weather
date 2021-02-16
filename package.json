@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "buid-github": "ng build --prod --base-href 'https://ferreirarubens.github.io/weather/'",
+    "build-github": "ng build --prod --base-href 'https://ferreirarubens.github.io/weather/'",
     "publish-github": "npx angular-cli-ghpages --dir=dist/weather"
   },
   "private": true,
